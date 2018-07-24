@@ -3,7 +3,7 @@
     margin: 0;
     border: 0;
     padding: 0;
-    border: #f77 1px solid;
+
 }
 
 a {
@@ -25,6 +25,10 @@ a {
     top: 40px;
     left: 0;
     z-index: 10; 
+}
+
+.remove {
+    display: none;
 }
 
 /*JS*/
@@ -95,6 +99,7 @@ a {
 }
    
 .profile {
+    position: relative;
     width: 100%;
     height: 500px;
     display: flex;
@@ -107,11 +112,13 @@ a {
 
 .profileItem {
     display: flex;
+    position: relative;
 }
 
 #photo {
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center; 
     width: 22.8%;
     height: 79%;
     overflow: hidden;
@@ -140,6 +147,7 @@ a {
     padding-left: 25%;
     background-color: rgb(255, 252, 221);
     padding-bottom: 7%;
+    position: relative;
 }
 
 .resume h2 {
@@ -169,23 +177,17 @@ a {
     justify-content: flex-start;
 }
 
+.mAbility {
+    display: none;
+}
+
 .iSkill {
     flex-grow: 2;
     height: 20vh;
 }
 
-#coding:before {
-    content: "";
-    padding-left: 10%;
-}
-
-#extra:before {
-    content: "";
-    padding-left: 10%;
-}
-
-.skillItem {
-    max-width: 41.666%;
+.skillItem, .skillItem1, skillItem2 {
+    max-width: 85%;
     display: flex;
     flex-direction: column;
     flex-grow: 5;
@@ -206,13 +208,33 @@ a {
 
 #extra>div {
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 130px;
     flex-grow: 1;
-    margin: 0 3%;
+    margin: 0 3%; 
     font-family: 'Roboto', sans-serif;
     text-align: left;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding-left: 130px;
+}
+
+.btn1, .btn2 {
+    display: show;
+    font-size: 24px;
+    height: 30px;
+    width: 66px;
+    text-align: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px 10px 0px -0px;
+}
+
+.clicked {
+    size: 1.1;
+    background-color: #000;
+    color: #fff;
+    z-index: 10;
+    overflow: visible;
 }
 
 /*skills*/
@@ -505,7 +527,7 @@ a {
     justify-content: space-around;
     background-color: rgb(136, 136, 136);
     padding-top: 3%;
-    height: 60vh;
+    height: 700px;
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 2em;
     line-height: 144px;
@@ -515,7 +537,7 @@ a {
 .protfolio>div{
     margin: 3% 1%;
     width: 320px;
-    height: 25%;
+    height: 20%;
     filter: blur(0px);
 } 
 
@@ -526,7 +548,7 @@ a {
     filter: blur(4px);
 }
 
-.protfolio>div>span {
+.protfolio>div>a {
     z-index: 3;
     position: relative;
     color: #fff;
@@ -536,7 +558,7 @@ a {
     animation: fadeInW 1s;
 }
 
-.protfolio>div>span:hover {
+.protfolio>div>a:hover {
     cursor: pointer;
 }
 
@@ -558,26 +580,104 @@ a {
         list-style-type: none;
         width: 100%;
         display: none;
-        text-align: left;
+        z-index: 5;
+        text-align: center;
         font-family: 'Roboto', sans-serif;    
         line-height: 1.5em;
         background-color:rgba(196, 196, 196, 0.575);
     }
 
     .phoneBar {
-        display: flex;
-        justify-content: flex-end;
         height: 40px;
         width: 100%;
         background-color: rgba(211, 211, 211, 0.493);
     }
 
     .icon {
+        float: right;
         width: 36px;
         height: 36px;
         border-radius: 10px;
         background-image: url(../img/icon.png);
         background-size: cover;
+        background-color: rgb(170, 170, 170);
     }
 
+    #photo {
+        align-self: center;
+        width: 300px;
+        height: 300px;
+    }
+
+    .profile {
+        flex-direction: column;
+    }
+
+    #paragraph {
+        font-size: 12px;
+        align-self: center;
+    }
+
+    .resume{
+        padding-left: 20px;
+        margin-top: 180px;
+    }
+
+    .resume>h3 {
+        font-size: 16px;
+    }
+
+    .resume>h4 {
+        font-size: 14px;
+    }
+
+    .resume>p {
+        font-size: 12px;
+        margin-right: 20px;
+    }
+
+    .ability {
+        display: none;
+    }
+
+    .mAbility {
+        display: flex;
+        flex-direction: column;
+        height: 85vh;
+    }
+
+    #coding>div {
+        background-size: 80px;
+    }
+
+    #coding>div:before{
+        margin-left: -30px;
+    }
+
+    #coding>div:after{
+        margin-left: -30px;
+    }
+    
+    .skillItem2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-grow: 1;
+        margin: 0 ; 
+        font-family: 'Roboto', sans-serif;
+        text-align: left;
+    }
+
+    #extra>div {
+        background-size: 80px;
+    }
+
+    #extra>div:before{
+        margin-left: -30px;
+    }
+
+    #extra>div:after{
+        margin-left: -30px;
+    }
+    
 }
