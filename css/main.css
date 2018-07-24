@@ -3,6 +3,7 @@
     margin: 0;
     border: 0;
     padding: 0;
+    border: #f77 1px solid;
 }
 
 a {
@@ -17,7 +18,13 @@ a {
     top: 0;
     left: 0;
     z-index: 10; 
-    transition: .5s;
+}
+
+.mfixed {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    z-index: 10; 
 }
 
 /*JS*/
@@ -48,7 +55,15 @@ a {
 .headtop h3, p {
     text-align: center;
 }
-        
+
+.phoneBar {
+    display: none;
+}
+
+.mNav {
+    display: none;
+}
+
 .nav {
     width: 100%;
     display: flex;
@@ -160,12 +175,12 @@ a {
 }
 
 #coding:before {
-    content: "Skills";
+    content: "";
     padding-left: 10%;
 }
 
 #extra:before {
-    content: "Extra";
+    content: "";
     padding-left: 10%;
 }
 
@@ -532,4 +547,37 @@ a {
     100% {
         color: #fff;
     }
+}
+
+@media only screen and (max-width: 840px) {
+    .navItem {
+        display: none;
+    }
+
+    .mNav {
+        list-style-type: none;
+        width: 100%;
+        display: none;
+        text-align: left;
+        font-family: 'Roboto', sans-serif;    
+        line-height: 1.5em;
+        background-color:rgba(196, 196, 196, 0.575);
+    }
+
+    .phoneBar {
+        display: flex;
+        justify-content: flex-end;
+        height: 40px;
+        width: 100%;
+        background-color: rgba(211, 211, 211, 0.493);
+    }
+
+    .icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background-image: url(../img/icon.png);
+        background-size: cover;
+    }
+
 }

@@ -30,8 +30,12 @@ $(document).ready(function(){
     $(window).scroll(function(){
         if ($(window).scrollTop() >= $('.profile').offset().top-100) {
          $('.nav').addClass('fixed');
+         $('.phoneBar').addClass('fixed');
+         $('.mNav').addClass('mfixed');
         } else {
          $('.nav').removeClass('fixed');
+         $('.phoneBar').removeClass('fixed');
+         $('.mNav').removeClass('mfixed');
         }
     });
 
@@ -68,6 +72,11 @@ $(document).ready(function(){
         }
     });
 
+//手機板NAV
+    
+    $('.icon').click(function(){
+        $('.mNav').slideToggle();
+    })
 
 //作品集上字
     $('.ookami').hover(function(){
