@@ -6,6 +6,12 @@ $(document).ready(function(){
             scrollTop: $( $.attr(this, 'href') ).offset().top-50
         }, 800);
     });
+    $('.mNav').on('click', '.anchor', function(event){
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top-40
+        }, 800);
+    });
 
     $('.skillItem1').show();
     $('.skillItem2').hide();
@@ -102,7 +108,7 @@ $(window).scroll(function(){
 
 //作品集上字
     $('.ookami').hover(function(){
-        $(this).append($('<a>狼少年的獨白</a>'));
+        $(this).append($('<a target="_blank" rel="noopener noreferrer" href="https://goo.gl/B33xis">狼少年的獨白</a>'));
     }
     , function() {
         $( this ).find( "a:last" ).remove();

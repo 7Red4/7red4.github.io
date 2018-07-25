@@ -3,7 +3,6 @@
     margin: 0;
     border: 0;
     padding: 0;
-
 }
 
 a {
@@ -32,6 +31,11 @@ a {
 }
 
 /*JS*/
+
+.main {
+    max-width: 960px;
+    margin: auto;
+}
 
 .headtop {
     display: flex;
@@ -142,7 +146,6 @@ a {
 }
 
 .resume {
-    margin-top: 3%;
     font-family:  'Roboto', sans-serif;
     padding-left: 25%;
     background-color: rgb(255, 252, 221);
@@ -150,10 +153,10 @@ a {
     position: relative;
 }
 
-.resume h2 {
+#resume {
+    position: relative;
+    margin-top: 3%;
     text-align: center;
-    margin-left: -45%;
-    margin-bottom: 7%;
     font-size: 2em;
 }
 
@@ -186,7 +189,7 @@ a {
     height: 20vh;
 }
 
-.skillItem, .skillItem1, skillItem2 {
+.skillItem{
     max-width: 85%;
     display: flex;
     flex-direction: column;
@@ -215,6 +218,10 @@ a {
     margin: 0 3%; 
     font-family: 'Roboto', sans-serif;
     text-align: left;
+}
+
+.btn1 {
+    margin-left: 20px ;
 }
 
 .btn1, .btn2 {
@@ -584,13 +591,21 @@ a {
         text-align: center;
         font-family: 'Roboto', sans-serif;    
         line-height: 1.5em;
-        background-color:rgba(196, 196, 196, 0.575);
+        background-color:rgba(196, 196, 196, 0.89);
+    }
+
+    .mNav>ul>li {
+        border-top: #000 1px solid;
+    }
+
+    .anchor {
+        width: 840px;
     }
 
     .phoneBar {
         height: 40px;
         width: 100%;
-        background-color: rgba(211, 211, 211, 0.493);
+        background-color: rgba(211, 211, 211, 0.856);
     }
 
     .icon {
@@ -618,9 +633,12 @@ a {
         align-self: center;
     }
 
+    #resume {
+        margin-top: 180px;
+    }
+
     .resume{
         padding-left: 20px;
-        margin-top: 180px;
     }
 
     .resume>h3 {
@@ -644,6 +662,7 @@ a {
         display: flex;
         flex-direction: column;
         height: 85vh;
+        margin: 3% 10% 0 10%;
     }
 
     #coding>div {
@@ -658,6 +677,19 @@ a {
         margin-left: -30px;
     }
     
+    .skillItem1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-grow: 1;
+        margin: 0;
+        padding: 0; 
+        font-family: 'Roboto', sans-serif;
+        text-align: left;
+        border: #000 1px solid;
+        border-radius: 20px;
+    }
+
     .skillItem2 {
         display: flex;
         flex-direction: column;
@@ -666,6 +698,8 @@ a {
         margin: 0 ; 
         font-family: 'Roboto', sans-serif;
         text-align: left;
+        border: #000 1px solid;
+        border-radius: 20px;
     }
 
     #extra>div {
