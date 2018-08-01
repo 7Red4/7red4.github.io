@@ -1,12 +1,23 @@
-$(document).ready(function () {
+$(document).ready(function ($) {
 
-  $('.nav').on('click', '.navItem', function (event) {
+  $nav = $('.nav');
+  $mNav = $('.mNav');
+  $sk1 = $('.skillItem1');
+  $sk2 = $('.skillItem2');
+  $btn1 = $('.btn1');
+  $btn2 = $('.btn2');
+  $phBar = $('.phoneBar');
+  $skillTop =$('#skills').offset().top;
+  $winTop = $(window).scrollTop();
+  
+  //順暢導向
+  $nav.on('click', '.navItem', function (event) {
     event.preventDefault();
     $('html, body').animate({
       scrollTop: $($.attr(this, 'href')).offset().top - 50
     }, 800);
   });
-  $('.mNav').on('click', '.anchor', function (event) {
+  $mNav.on('click', '.anchor', function (event) {
     event.preventDefault();
     $('html, body').animate({
       scrollTop: $($.attr(this, 'href')).offset().top - 40
@@ -14,16 +25,16 @@ $(document).ready(function () {
   });
 
   //初始啟動
-  $('.skillItem1').show();
-  $('.skillItem2').hide();
-  $('.btn1').addClass('clicked');
+  $sk1.show();
+  $sk2.hide();
+  $btn1.addClass('clicked');
 
   //手機板NAV
   $('.icon').click(function () {
-    $('.mNav').slideToggle();
+    $mNav.slideToggle();
   });
   $(window).scroll(function () {
-    $('.mNav').slideUp('normal');
+    $mNav.slideUp('normal');
   });
 
   //照片輪播
@@ -47,63 +58,63 @@ $(document).ready(function () {
   }
   //高度判斷
   $(window).scroll(function () {
-    if ($(window).scrollTop() >= $('.profile').offset().top - 100) {
-      $('.nav').addClass('fixed');
-      $('.phoneBar').show();
-      $('.phoneBar').addClass('fixed');
-      $('.mNav').addClass('mfixed');
+    if ($winTop >= $('.profile').offset().top - 100) {
+      $nav.addClass('fixed');
+      $phBar.show();
+      $phBar.addClass('fixed');
+      $mNav.addClass('mfixed');
     } else {
-      $('.nav').removeClass('fixed');
-      $('.phoneBar').removeClass('fixed');
-      $('.mNav').removeClass('mfixed');
+      $nav.removeClass('fixed');
+      $phBar.removeClass('fixed');
+      $mNav.removeClass('mfixed');
     }
   });
 
   $(window).scroll(function () {
-    if ($(window).scrollTop() >= $('#skills').offset().top - 600) {
+    if ($winTop >= $skillTop - 600) {
       $('.codItem1').addClass('HTML');
     }
-    if ($(window).scrollTop() >= $('#skills').offset().top - 560) {
+    if ($winTop >= $skillTop - 560) {
       $('.codItem2').addClass('CSS');
     }
-    if ($(window).scrollTop() >= $('#skills').offset().top - 520) {
+    if ($winTop >= $skillTop - 520) {
       $('.codItem3').addClass('JavaScript');
     }
-    if ($(window).scrollTop() >= $('#skills').offset().top - 480) {
+    if ($winTop >= $skillTop - 480) {
       $('.codItem4').addClass('jQuery');
     }
-    if ($(window).scrollTop() >= $('#skills').offset().top - 440) {
+    if ($winTop >= $skillTop - 440) {
       $('.codItem5').addClass('Vuejs');
     }
   });
 
   $(window).scroll(function () {
-    if ($(window).scrollTop() >= $('#skills').offset().top - 600) {
+    if ($winTop >= $skillTop - 600) {
       $('.exItem1').addClass('Ae');
     }
-    if ($(window).scrollTop() >= $('#skills').offset().top - 560) {
+    if ($winTop >= $skillTop - 560) {
       $('.exItem2').addClass('Pr');
     }
-    if ($(window).scrollTop() >= $('#skills').offset().top - 520) {
+    if ($winTop >= $skillTop - 520) {
       $('.exItem3').addClass('Ps');
     }
-    if ($(window).scrollTop() >= $('#skills').offset().top - 480) {
+    if ($winTop >= $skillTop - 480) {
       $('.exItem4').addClass('Ai');
     }
   });
 
-  //技能表分頁
-  $('.btn1').click(function () {
-    $('.skillItem2').hide();
-    $('.skillItem1').show();
-    $('.btn1').addClass('clicked');
-    $('.btn2').removeClass('clicked');
+  //手機板技能表分頁
+  $btn1.click(function () {
+    $sk2.hide();
+    $sk1.show();
+    $btn1.addClass('clicked');
+    $btn2.removeClass('clicked');
   });
-  $('.btn2').click(function () {
-    $('.skillItem1').hide();
-    $('.skillItem2').show();
-    $('.btn2').addClass('clicked');
-    $('.btn1').removeClass('clicked');
+  $btn2.click(function () {
+    $sk1.hide();
+    $sk2.show();
+    $btn2.addClass('clicked');
+    $btn1.removeClass('clicked');
   });
 
   //作品集上字
@@ -125,4 +136,4 @@ $(document).ready(function () {
     , function () {
       $(this).find("a:last").remove();
     })
-});
+}) ($);
