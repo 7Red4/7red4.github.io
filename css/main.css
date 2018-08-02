@@ -127,7 +127,6 @@ a {
     overflow: hidden;
     background-image: url(../img/profile2.jpg);
     transition:1s;
-    z-index: 99;
 }
 
 #paragraph {

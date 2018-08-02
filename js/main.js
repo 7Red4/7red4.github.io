@@ -1,14 +1,12 @@
 $(document).ready(function ($) {
 
-  $nav = $('.nav');
-  $mNav = $('.mNav');
-  $sk1 = $('.skillItem1');
-  $sk2 = $('.skillItem2');
-  $btn1 = $('.btn1');
-  $btn2 = $('.btn2');
-  $phBar = $('.phoneBar');
-  $skillTop =$('#skills').offset().top;
-  $winTop = $(window).scrollTop();
+  var $nav = $('.nav');
+  var $mNav = $('.mNav');
+  var $sk1 = $('.skillItem1');
+  var $sk2 = $('.skillItem2');
+  var $btn1 = $('.btn1');
+  var $btn2 = $('.btn2');
+  var $phBar = $('.phoneBar');
   
   //順暢導向
   $nav.on('click', '.navItem', function (event) {
@@ -58,7 +56,7 @@ $(document).ready(function ($) {
   }
   //高度判斷
   $(window).scroll(function () {
-    if ($winTop >= $('.profile').offset().top - 100) {
+    if ($(window).scrollTop() >= $('.profile').offset().top - 100) {
       $nav.addClass('fixed');
       $phBar.show();
       $phBar.addClass('fixed');
@@ -71,34 +69,34 @@ $(document).ready(function ($) {
   });
 
   $(window).scroll(function () {
-    if ($winTop >= $skillTop - 600) {
+    if ($(window).scrollTop() >= $('#skills').offset().top - 600) {
       $('.codItem1').addClass('HTML');
     }
-    if ($winTop >= $skillTop - 560) {
+    if ($(window).scrollTop() >= $('#skills').offset().top - 560) {
       $('.codItem2').addClass('CSS');
     }
-    if ($winTop >= $skillTop - 520) {
+    if ($(window).scrollTop() >= $('#skills').offset().top - 520) {
       $('.codItem3').addClass('JavaScript');
     }
-    if ($winTop >= $skillTop - 480) {
+    if ($(window).scrollTop() >= $('#skills').offset().top - 480) {
       $('.codItem4').addClass('jQuery');
     }
-    if ($winTop >= $skillTop - 440) {
+    if ($(window).scrollTop() >= $('#skills').offset().top - 440) {
       $('.codItem5').addClass('Vuejs');
     }
   });
 
   $(window).scroll(function () {
-    if ($winTop >= $skillTop - 600) {
+    if ($(window).scrollTop() >= $('#skills').offset().top - 600) {
       $('.exItem1').addClass('Ae');
     }
-    if ($winTop >= $skillTop - 560) {
+    if ($(window).scrollTop() >= $('#skills').offset().top - 560) {
       $('.exItem2').addClass('Pr');
     }
-    if ($winTop >= $skillTop - 520) {
+    if ($(window).scrollTop() >= $('#skills').offset().top - 520) {
       $('.exItem3').addClass('Ps');
     }
-    if ($winTop >= $skillTop - 480) {
+    if ($(window).scrollTop() >= $('#skills').offset().top - 480) {
       $('.exItem4').addClass('Ai');
     }
   });
