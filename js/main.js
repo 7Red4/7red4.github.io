@@ -7,7 +7,7 @@ $(document).ready(function ($) {
   var $btn1 = $('.btn1');
   var $btn2 = $('.btn2');
   var $phBar = $('.phoneBar');
-  
+
   //順暢導向
   $nav.on('click', '.navItem', function (event) {
     event.preventDefault();
@@ -57,11 +57,12 @@ $(document).ready(function ($) {
   //高度判斷
   $(window).scroll(function () {
     if ($(window).scrollTop() >= $('.profile').offset().top - 100) {
-      $nav.addClass('fixed');
       $phBar.show();
+      $nav.addClass('fixed');
       $phBar.addClass('fixed');
       $mNav.addClass('mfixed');
     } else {
+      $phBar.hide();
       $nav.removeClass('fixed');
       $phBar.removeClass('fixed');
       $mNav.removeClass('mfixed');
@@ -134,4 +135,4 @@ $(document).ready(function ($) {
     , function () {
       $(this).find("a:last").remove();
     })
-}) ($);
+})($);

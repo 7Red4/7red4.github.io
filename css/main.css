@@ -100,6 +100,10 @@ a {
     font-family:  'Roboto', sans-serif;
 }
    
+#profile{
+    background-color: azure;
+}
+
 .profile {
     position: relative;
     flex: 1;
@@ -524,24 +528,33 @@ a {
 }
 /*extra*/
 
+#langL{
+    margin-top: 6%;
+    position: relative;
+    background-color: rgba(255, 254, 169, 0.76);
+}
+
 .lang{
-  margin-top: 6%;
-  width: 100%;
-  overflow: hidden;
-  background-color: rgba(255, 254, 169, 0.534);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(255, 254, 169, 0.534);
 }
 
-.lang>h2{
-  background-color: rgba(255, 254, 169, 0.76);
+.lang>div{
+    position: relative;
+    padding: 20px 25vw;
 }
 
-.lang>p{
+.lang>div>p{
+    font-size: 20px;
     font-weight: 580;
     text-align: left;
 }
 
 #protfolio {
-    margin-top: 5%;
     background-color: rgb(102, 102, 102);
     color: #fff;
 }
