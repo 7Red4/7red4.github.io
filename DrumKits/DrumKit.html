@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Raleway:100,200,600,700" rel="stylesheet">
+  <title>請任意按下Ａ～Ｚ鍵</title>
+</head>
+<audio id='a'>
+  <source src="_assets/audio/Open Hat_10.wav" type="audio/mpeg">
+</audio>
+<audio id='b'>
+  <source src="_assets/audio/Kick_1.wav" type="audio/mpeg">
+</audio>
+<audio id='c'>
+  <source src="_assets/audio/Clap_1.wav" type="audio/mpeg">
+</audio>
+<audio id='d'>
+  <source src="_assets/audio/Clap_10.wav" type="audio/mpeg">
+</audio>
+<audio id='e'>
+  <source src="_assets/audio/Perc_9.wav" type="audio/mpeg">
+</audio>
+<audio id='f'>
+  <source src="_assets/audio/Triangle_1.wav" type="audio/mpeg">
+</audio>
+<audio id='g'>
+  <source src="_assets/audio/Snare_5.wav" type="audio/mpeg">
+</audio>
+<audio id='h'>
+  <source src="_assets/audio/Snap_10.wav" type="audio/mpeg">
+</audio>
+<audio id='i'>
+  <source src="_assets/audio/Crash_8.wav" type="audio/mpeg">
+</audio>
+<audio id='j'>
+  <source src="_assets/audio/808_2.wav" type="audio/mpeg">
+</audio>
+<audio id='k'>
+  <source src="_assets/audio/Snap_3.wav" type="audio/mpeg">
+</audio>
+<audio id='l'>
+  <source src="_assets/audio/Snap_6.wav" type="audio/mpeg">
+</audio>
+<audio id='m'>
+  <source src="_assets/audio/Hit_10.wav" type="audio/mpeg">
+</audio>
+<audio id='n'>
+  <source src="_assets/audio/Hit_2.wav" type="audio/mpeg">
+</audio>
+<audio id='o'>
+  <source src="_assets/audio/Shaker_3.wav" type="audio/mpeg">
+</audio>
+<audio id='p'>
+  <source src="_assets/audio/Shaker_10.wav" type="audio/mpeg">
+</audio>
+<audio id='q'>
+  <source src="_assets/audio/Open Hat_9.wav" type="audio/mpeg">
+</audio>
+<audio id='r'>
+  <source src="_assets/audio/Perc_10.wav" type="audio/mpeg">
+</audio>
+<audio id='s'>
+  <source src="_assets/audio/Open Hat_8.wav" type="audio/mpeg">
+</audio>
+<audio id='t'>
+  <source src="_assets/audio/Hi Hat_1.wav" type="audio/mpeg">
+</audio>
+<audio id='u'>
+  <source src="_assets/audio/Crash_1.wav" type="audio/mpeg">
+</audio>
+<audio id='v'>
+  <source src="_assets/audio/Hit_1.wav" type="audio/mpeg">
+</audio>
+<audio id='w'>
+  <source src="_assets/audio/Vox_7.wav" type="audio/mpeg">
+</audio>
+<audio id='x'>
+  <source src="_assets/audio/Open Hat_1.wav" type="audio/mpeg">
+</audio>
+<audio id='y'>
+  <source src="_assets/audio/Shaker_1.wav" type="audio/mpeg">
+</audio>
+<audio id='z'>
+  <source src="_assets/audio/Open Hat_4.wav" type="audio/mpeg">
+</audio>
+
+<body id="whichkey">
+
+  <div id="log"></div>
+  <div id="erro">Invaild Key</div>
+
+  <script>
+    let key = '';
+    let SKey = 0;
+    let alpha = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+
+    $(document).ready(() => {
+      $("#erro").hide();
+      $("#whichkey").on("keydown", function (event) {
+        key = alpha[event.which - 65];
+        checker = event.which - 65
+        if (checker < 0 || checker > 25) {
+          $("#log").hide();
+          $("#erro").show();
+        } else {
+          $("#erro").hide();
+          $("#log").hide();
+          $("#log").fadeIn("fast");
+          $("#log").html(alpha[event.which - 65])
+          SKey = [event.which - 65]
+          playVid();
+        }
+      });
+    })
+    let a = document.getElementById('a')
+    let b = document.getElementById('b')
+    let c = document.getElementById('c')
+    let d = document.getElementById('d')
+    let e = document.getElementById('e')
+    let f = document.getElementById('f')
+    let g = document.getElementById('g')
+    let h = document.getElementById('h')
+    let i = document.getElementById('i')
+    let j = document.getElementById('j')
+    let k = document.getElementById('k')
+    let l = document.getElementById('l')
+    let m = document.getElementById('m')
+    let n = document.getElementById('n')
+    let o = document.getElementById('o')
+    let p = document.getElementById('p')
+    let q = document.getElementById('q')
+    let r = document.getElementById('r')
+    let s = document.getElementById('s')
+    let t = document.getElementById('t')
+    let u = document.getElementById('u')
+    let v = document.getElementById('v')
+    let w = document.getElementById('w')
+    let x = document.getElementById('x')
+    let y = document.getElementById('y')
+    let z = document.getElementById('z')
+
+    let SFX = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z];
+
+    function playVid() {
+      SFX[SKey].load();
+      SFX[SKey].play();
+
+    }
+
+  </script>
+  <style>
+    #whichkey {
+      background-color: lightgray;
+    }
+
+    #log {
+      color: azure;
+      font-family: fantasy;
+      font-size: 300px;
+      font-weight: normal;
+      text-align: center;
+    }
+
+    #erro {
+      color: azure;
+      font-family: fantasy;
+      font-size: 100px;
+      font-weight: normal;
+      text-align: center;
+    }
+  </style>
+</body>
+
+</html>
