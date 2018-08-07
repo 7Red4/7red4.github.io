@@ -10,6 +10,8 @@ $(document).ready(function($) {
   var $btn2 = $(".btn2");
   var $phBar = $(".phoneBar");
 
+  alert("This website is only work on chrome!!");
+
   //順暢導向
   $nav.on("click", ".navItem", function(event) {
     event.preventDefault();
