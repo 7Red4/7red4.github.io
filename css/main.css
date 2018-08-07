@@ -640,6 +640,7 @@ a {
 
     .icon {
         float: left;
+        margin-top: 1.5px;
         width: 36px;
         height: 36px;
         border-radius: 10px;
@@ -652,6 +653,7 @@ a {
 
     .cross {
         float: left;
+        margin-top: 1.5px;
         width: 36px;
         height: 36px;
         border-radius: 10px;
