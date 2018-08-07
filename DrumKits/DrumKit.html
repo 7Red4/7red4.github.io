@@ -87,7 +87,9 @@
 </audio>
 
 <body id="whichkey">
-
+  <div class="mobile">
+  <input type="text">
+</div>
   <div id="log"></div>
   <div id="erro">Invaild Key</div>
 
@@ -96,7 +98,7 @@
     let SKey = 0;
     let alpha = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
-    $(document).ready(() => {
+    $(document).ready(function() {
       $("#erro").hide();
       $("#whichkey").on("keydown", function (event) {
         key = alpha[event.which - 65];
@@ -113,7 +115,7 @@
           playVid();
         }
       });
-    })
+    });
     let a = document.getElementById('a')
     let b = document.getElementById('b')
     let c = document.getElementById('c')
@@ -169,6 +171,18 @@
       font-size: 100px;
       font-weight: normal;
       text-align: center;
+    }
+
+    .mobile {
+      display: none;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      .mobile {
+        display: flex;
+        justify-content: center;
+        z-index: 2;
+      }
     }
   </style>
 </body>

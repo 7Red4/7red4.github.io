@@ -754,12 +754,18 @@ a {
         margin-left: -30px;
     }
     
+    .lang>div>p{
+        font-size: 12px;
+        font-weight: 580;
+        text-align: left;
+    }
+
     @keyframes rotate {
         0%{
             transform: rotateZ(0deg)
         }
         100%{
-            transform: rotateZ(720deg)
+            transform: rotateZ(180deg)
         }
     }
 }

@@ -52,6 +52,8 @@ $(document).ready(function($) {
   $(window).scroll(function() {
     mNav.style.width = "0";
     mNav.style.height = "0";
+    $icon.show();
+    $cross.hide();
   });
 
   //照片輪播
