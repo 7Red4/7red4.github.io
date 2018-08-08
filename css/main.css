@@ -549,6 +549,7 @@ a {
 }
 
 .lang>div>p{
+    white-space:nowrap;
     font-size: 20px;
     font-weight: 580;
     text-align: left;
@@ -569,7 +570,7 @@ a {
     background-color: rgb(136, 136, 136);
     padding-top: 3%;
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 144px;
     text-align: center;
 }
@@ -577,7 +578,7 @@ a {
 .protfolio>div{
     margin: 3% 1%;
     width: 320px;
-    height: 20%;
+    height: 144px;
     filter: blur(0px);
 } 
 
@@ -596,6 +597,7 @@ a {
     right: -5px;
     transition: 1s;
     animation: fadeInW 1s;
+    overflow: hidden;
 }
 
 .protfolio>div>a:hover {
