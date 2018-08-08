@@ -264,10 +264,12 @@ a {
 }
 
 .HTML:after{
-    content: "";
+    content: "skilled";
     height: 20px;
     width: 75%;
     background-color: #f77;
+    color:  rgb(216, 216, 216);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
     animation: HTMLprogress 2s ease-out;
 }
 
@@ -294,10 +296,12 @@ a {
 }
 
 .CSS:after{
-    content: "";
+    content: "skilled";
     height: 20px;
     width: 90%;
     background-color: #f77;
+    color:  rgb(216, 216, 216);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
     animation: CSSprogress 2s ease-out;
 }
 
@@ -323,10 +327,12 @@ a {
 }
 
 .JavaScript:after{
-    content: "";
+    content: "skilled";
     height: 20px;
     width: 80%;
     background-color: #f77;
+    color:  rgb(216, 216, 216);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
     animation: JavaScriptprogress 2s ease-out;
 }
 
@@ -352,10 +358,12 @@ a {
 }
 
 .jQuery:after{
-    content: "";
+    content: "not bad";
     height: 20px;
     width: 70%;
     background-color: #f77;
+    color:  rgb(216, 216, 216);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
     animation: jQueryprogress 2s ease-out;
 }
 
@@ -382,10 +390,12 @@ a {
 }
 
 .Vuejs:after{
-    content: "";
+    content: "newbie";
     height: 20px;
-    width: 20%;
+    width: 30%;
     background-color: #f77;
+    color:  rgb(216, 216, 216);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
     animation: Vuejsprogress 2s ease-out;
 }
 
@@ -394,7 +404,7 @@ a {
         width: 0%;
     }
     100% {
-        width: 20%;
+        width: 30%;
     }
 }
 
@@ -424,10 +434,12 @@ a {
 }
 
 .Ae:after{
-    content: "";
+    content: "skilled";
     height: 20px;
     width: 80%;
     background-color: rgba(139, 98, 194, 0.712);
+    color:  rgb(216, 216, 216);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
     animation: AeBar 2s ease-out;
 }
 
@@ -453,10 +465,12 @@ a {
 }
 
 .Pr:after{
-    content: "";
+    content: "skilled";
     height: 20px;
     width: 70%;
     background-color: #660077;
+    color:  rgb(216, 216, 216);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
     animation: PrBar 2s ease-out;
 }
 
@@ -482,10 +496,12 @@ a {
 }
 
 .Ps:after{
-    content: "";
+    content: "basic";
     height: 20px;
     width: 50%;
     background-color: #33CCFF;
+    color:  rgb(216, 216, 216);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
     animation: PsBar 2s ease-out;
 }
 
@@ -511,10 +527,12 @@ a {
 }
 
 .Ai:after{
-    content: "";
+    content: "basic";
     height: 20px;
     width: 50%;
     background-color: #FFAA33;
+    color: rgb(216, 216, 216);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
     animation: AiBar 2s ease-out;
 }
 
