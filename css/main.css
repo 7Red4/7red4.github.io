@@ -44,20 +44,33 @@ a {
     height:100vh;
     overflow: hidden;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 }
 
-.headtop h3 {
+.headtop>h3 {
     font-family: 'Roboto', sans-serif;
     font-size: 3em;
 }
 
-.headtop p {
+.headtop>p{
     font-family: 'Noto Sans TC', sans-serif;
 }
 
-.headtop h3, p {
+.headtop>h3, p{
     text-align: center;
+}
+
+.headtop>a{
+    background-image: url(../img/GitHub.png);
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    margin-top: 20px;
+}
+
+.headtop>a:hover{
+    transform: scale(1.1);
+    transition: 0.7s;
 }
 
 .phoneBar {
@@ -554,6 +567,7 @@ a {
 #protfolio {
     background-color: rgb(102, 102, 102);
     color: #fff;
+    margin-top: 3%;
 }
 
 .protfolio {
@@ -602,13 +616,23 @@ a {
 
 .contact{
     display: flex;
+    flex-direction: column;
+    background-color: rgb(34, 33, 33);
     width: 100%;
-    justify-content: flex-end;
+    height: 400px;
+    color: #fff;
+    overflow: hidden;
 }
 
-.contact>img{
-    width: 20px;
-    height: 20px;
+.contact>div{
+    display: flex;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.contact>div>img{
+    width: 25px;
+    height: 25px;
 }
 
 @keyframes fadeInW {
@@ -635,6 +659,15 @@ a {
 
 .lang>div>p{
     text-align: left;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotateZ(0deg)
+    }
+    100%{
+        transform: rotateZ(360deg)
+    }
 }
 
 @media only screen and (max-width: 840px) {
@@ -793,12 +826,4 @@ a {
         font-size: 16px;
     }
 
-    @keyframes rotate {
-        0%{
-            transform: rotateZ(0deg)
-        }
-        100%{
-            transform: rotateZ(180deg)
-        }
-    }
 }
