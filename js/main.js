@@ -41,19 +41,17 @@ $(document).ready(function($) {
   //手機板NAV
   $icon.click(function() {
     mNav.style.width = "200px";
-    mNav.style.height = "auto";
+    mNav.style.height = "100vh";
     $icon.hide();
     $cross.show();
   });
   $cross.click(function() {
     mNav.style.width = "0";
-    mNav.style.height = "0";
     $icon.show();
     $cross.hide();
   });
   $(window).scroll(function() {
     mNav.style.width = "0";
-    mNav.style.height = "0";
     $icon.show();
     $cross.hide();
   });
@@ -84,11 +82,13 @@ $(document).ready(function($) {
       $nav.addClass("fixed");
       $phBar.addClass("fixed");
       $mNav.addClass("mfixed");
+      $mNav.show();
     } else {
       $phBar.hide();
       $nav.removeClass("fixed");
       $phBar.removeClass("fixed");
       $mNav.removeClass("mfixed");
+      $mNav.hide();
     }
   });
 
