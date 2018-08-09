@@ -72,6 +72,11 @@ a {
     display: none;
 }
 
+.mNav>a{
+    color: transparent;
+    cursor: default;
+}
+
 .nav {
     width: 100%;
     display: flex;
@@ -546,32 +551,6 @@ a {
 }
 /*extra*/
 
-#langL{
-    margin-top: 6%;
-    position: relative;
-    background-color: rgba(255, 254, 169, 0.76);
-}
-
-.lang{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    width: 100%;
-    overflow: hidden;
-    background-color: rgba(255, 254, 169, 0.534);
-}
-
-.lang>div{
-    position: relative;
-    padding: 20px 25vw;
-}
-
-.lang>div>p{
-    white-space:nowrap;
-    font-size: 20px;
-    font-weight: 580;
-    text-align: left;
-}
 
 #protfolio {
     background-color: rgb(102, 102, 102);
@@ -642,6 +621,23 @@ a {
     }
 }
 
+#knowledge{
+    display: flex;
+    justify-content: space-around;
+}
+
+#knowledge>div>h2{
+    background-color: rgb(255, 251, 188);
+}
+
+.know>div>p{
+    text-align: left;
+}
+
+.lang>div>p{
+    text-align: left;
+}
+
 @media only screen and (max-width: 840px) {
     .navItem {
         display: none;
@@ -664,6 +660,7 @@ a {
 
     .mNav>a{
         padding: 20px;
+        color: #000;
     }
 
     .phoneBar {
@@ -790,10 +787,10 @@ a {
         margin-left: -30px;
     }
     
-    .lang>div>p{
-        font-size: 12px;
-        font-weight: 580;
-        text-align: left;
+    #knowledge{
+        flex-direction: column;
+        padding-left: 20px;
+        font-size: 16px;
     }
 
     @keyframes rotate {
