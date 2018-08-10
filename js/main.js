@@ -4,6 +4,11 @@ $(document).ready(function($) {
   var $icon = $(".icon");
   var $cross = $(".cross");
   var mNav = document.getElementById("mNav");
+  var photo = document.getElementById("photo");
+  var paragraph = document.getElementById("paragraph");
+  var $resume = document.getElementsByClassName("resume");
+  var $profile = $(".profile");
+  var $skill = $("#skills");
   var $sk1 = $(".skillItem1");
   var $sk2 = $(".skillItem2");
   var $btn1 = $(".btn1");
@@ -77,7 +82,7 @@ $(document).ready(function($) {
   }
   //高度判斷
   $(window).scroll(function() {
-    if ($(window).scrollTop() >= $(".profile").offset().top - 100) {
+    if ($(window).scrollTop() >= $profile.offset().top - 100) {
       $phBar.show();
       $nav.addClass("fixed");
       $phBar.addClass("fixed");
@@ -89,38 +94,49 @@ $(document).ready(function($) {
       $phBar.removeClass("fixed");
       $mNav.removeClass("mfixed");
       $mNav.hide();
-    }
-  });
+    };
 
-  $(window).scroll(function() {
-    if ($(window).scrollTop() >= $("#skills").offset().top - 600) {
+    if ($(window).scrollTop() >= $profile.offset().top - 600) {
+      document.getElementById("profile").style.opacity = "1";
+      photo.style.margin = "0";
+      photo.style.opacity = "1";
+      paragraph.style.paddingLeft = "0px";
+      paragraph.style.opacity = "1";
+    };
+
+    if ($(window).scrollTop() >= $(".resume").offset().top - 200) {
+      document.getElementById("resume").style.marginTop = "3%";
+      document.getElementById("resume").style.opacity = "1";
+      $resume[0].style.marginTop = "0";
+      $resume[0].style.opacity = "1";
+    }
+
+    if ($(window).scrollTop() >= $skill.offset().top - 600) {
       $(".codItem1").addClass("HTML");
     }
-    if ($(window).scrollTop() >= $("#skills").offset().top - 560) {
+    if ($(window).scrollTop() >= $skill.offset().top - 560) {
       $(".codItem2").addClass("CSS");
     }
-    if ($(window).scrollTop() >= $("#skills").offset().top - 520) {
+    if ($(window).scrollTop() >= $skill.offset().top - 520) {
       $(".codItem3").addClass("JavaScript");
     }
-    if ($(window).scrollTop() >= $("#skills").offset().top - 480) {
+    if ($(window).scrollTop() >= $skill.offset().top - 480) {
       $(".codItem4").addClass("jQuery");
     }
-    if ($(window).scrollTop() >= $("#skills").offset().top - 440) {
+    if ($(window).scrollTop() >= $skill.offset().top - 440) {
       $(".codItem5").addClass("Vuejs");
     }
-  });
 
-  $(window).scroll(function() {
-    if ($(window).scrollTop() >= $("#skills").offset().top - 600) {
+    if ($(window).scrollTop() >= $skill.offset().top - 600) {
       $(".exItem1").addClass("Ae");
     }
-    if ($(window).scrollTop() >= $("#skills").offset().top - 560) {
+    if ($(window).scrollTop() >= $skill.offset().top - 560) {
       $(".exItem2").addClass("Pr");
     }
-    if ($(window).scrollTop() >= $("#skills").offset().top - 520) {
+    if ($(window).scrollTop() >= $skill.offset().top - 520) {
       $(".exItem3").addClass("Ps");
     }
-    if ($(window).scrollTop() >= $("#skills").offset().top - 480) {
+    if ($(window).scrollTop() >= $skill.offset().top - 480) {
       $(".exItem4").addClass("Ai");
     }
   });
@@ -178,4 +194,4 @@ $(document).ready(function($) {
         .remove();
     }
   );
-})($);
+}) ($);

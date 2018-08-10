@@ -119,6 +119,8 @@ a {
    
 #profile{
     background-color: azure;
+    opacity: 0;
+    transition: 1s;
 }
 
 .profile {
@@ -131,12 +133,7 @@ a {
     justify-content: left;
     align-items: flex-start;
     font-family: 'Noto Sans TC', sans-serif;
-}
-
-
-.profileItem {
-    display: flex;
-    position: relative;
+    transition: 2s;
 }
 
 #photo {
@@ -147,6 +144,8 @@ a {
     height: 330px;
     overflow: hidden;
     background-image: url(../img/profile2.jpg);
+    opacity: 0;
+    margin-left: -600px;
     transition:1s;
 }
 
@@ -154,10 +153,12 @@ a {
     display: flex;
     flex-direction: column;
     width: 79%;
-    margin-left: 30px;
-    margin-right: 5%;
+    margin-left: 20px;
+    padding-left: 600px;
+    opacity: 0;
     line-height: 1.5;
     font-size: 18px;
+    transition: 1s;
 }
 
 #paragraph p{
@@ -171,12 +172,16 @@ a {
     background-color: rgb(255, 252, 221);
     padding-bottom: 7%;
     position: relative;
+    margin-top: -200px;
+    opacity: 0;
+    transition: 1s;
 }
 
 #resume {
     position: relative;
     width: 100%;
-    margin-top: 3%;
+    opacity: 0;
+    transition: 1s;
     text-align: center;
     font-size: 2em;
     background-color: rgb(252, 248, 204);
