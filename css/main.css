@@ -69,7 +69,7 @@ a {
 }
 
 .headtop>a:hover{
-    transform: scale(1.1);
+    transform: scale(1.2) rotate(360deg);
     transition: 0.7s;
 }
 
