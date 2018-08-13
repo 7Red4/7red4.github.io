@@ -73,6 +73,26 @@ a {
     transition: 0.7s;
 }
 
+i {
+    position: relative;
+    border: solid #fff;
+    margin-top: 70px;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    animation: arrow 1.5s infinite;
+  }
+
+@keyframes arrow {
+    0%, 100%{
+        transform: translate(0, 0) rotate(45deg);
+    }
+    50%{
+        transform: translate(0, 10px) rotate(45deg);
+    }
+}
+
+
 .phoneBar {
     display: none;
 }
@@ -172,7 +192,7 @@ a {
     background-color: rgb(255, 252, 221);
     padding-bottom: 7%;
     position: relative;
-    margin-top: -200px;
+    transform: translate(0, -100px);
     opacity: 0;
     transition: 1s;
 }
@@ -182,6 +202,7 @@ a {
     width: 100%;
     opacity: 0;
     transition: 1s;
+    transform: translate(0, -100px);
     text-align: center;
     font-size: 2em;
     background-color: rgb(252, 248, 204);
@@ -568,6 +589,22 @@ a {
 }
 /*extra*/
 
+#knowledge{
+    display: flex;
+    justify-content: space-around;
+}
+
+#knowledge>div>h2{
+    background-color: rgb(255, 251, 188);
+}
+
+.know>div>p{
+    text-align: left;
+}
+
+.lang>div>p{
+    text-align: left;
+}
 
 #protfolio {
     background-color: rgb(102, 102, 102);
@@ -624,7 +661,7 @@ a {
     flex-direction: column;
     background-color: rgb(34, 33, 33);
     width: 100%;
-    height: 400px;
+    height: 200px;
     color: #fff;
     overflow: hidden;
 }
@@ -647,23 +684,6 @@ a {
     100% {
         color: #fff;
     }
-}
-
-#knowledge{
-    display: flex;
-    justify-content: space-around;
-}
-
-#knowledge>div>h2{
-    background-color: rgb(255, 251, 188);
-}
-
-.know>div>p{
-    text-align: left;
-}
-
-.lang>div>p{
-    text-align: left;
 }
 
 @keyframes rotate {

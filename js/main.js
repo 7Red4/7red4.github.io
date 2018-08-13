@@ -1,4 +1,4 @@
-$(document).ready(function($) {
+$(document).ready(function ($) {
   var $nav = $(".nav");
   var $mNav = $(".mNav");
   var $icon = $(".icon");
@@ -18,7 +18,7 @@ $(document).ready(function($) {
   alert("This website is only work on chrome!!");
 
   //順暢導向
-  $nav.on("click", ".navItem", function(event) {
+  $nav.on("click", ".navItem", function (event) {
     event.preventDefault();
     $("html, body").animate(
       {
@@ -27,7 +27,7 @@ $(document).ready(function($) {
       800
     );
   });
-  $mNav.on("click", ".anchor", function(event) {
+  $mNav.on("click", ".anchor", function (event) {
     event.preventDefault();
     $("html, body").animate(
       {
@@ -44,18 +44,18 @@ $(document).ready(function($) {
   $cross.hide();
 
   //手機板NAV
-  $icon.click(function() {
+  $icon.click(function () {
     mNav.style.width = "200px";
     mNav.style.height = "100vh";
     $icon.hide();
     $cross.show();
   });
-  $cross.click(function() {
+  $cross.click(function () {
     mNav.style.width = "0";
     $icon.show();
     $cross.hide();
   });
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     mNav.style.width = "0";
     $icon.show();
     $cross.hide();
@@ -81,7 +81,7 @@ $(document).ready(function($) {
     }
   }
   //高度判斷
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(window).scrollTop() >= $profile.offset().top - 100) {
       $phBar.show();
       $nav.addClass("fixed");
@@ -104,51 +104,34 @@ $(document).ready(function($) {
       paragraph.style.opacity = "1";
     };
 
-    if ($(window).scrollTop() >= $(".resume").offset().top - 200) {
-      document.getElementById("resume").style.marginTop = "3%";
+    if ($(window).scrollTop() >= $(".resume").offset().top - 400) {
+      document.getElementById("resume").style.transform = "translate(0, 0)";
       document.getElementById("resume").style.opacity = "1";
-      $resume[0].style.marginTop = "0";
+      $resume[0].style.transform = "translate(0, 0)"
       $resume[0].style.opacity = "1";
     }
 
-    if ($(window).scrollTop() >= $skill.offset().top - 600) {
+    if ($(window).scrollTop() >= $skill.offset().top - 400) {
       $(".codItem1").addClass("HTML");
-    }
-    if ($(window).scrollTop() >= $skill.offset().top - 560) {
       $(".codItem2").addClass("CSS");
-    }
-    if ($(window).scrollTop() >= $skill.offset().top - 520) {
       $(".codItem3").addClass("JavaScript");
-    }
-    if ($(window).scrollTop() >= $skill.offset().top - 480) {
       $(".codItem4").addClass("jQuery");
-    }
-    if ($(window).scrollTop() >= $skill.offset().top - 440) {
       $(".codItem5").addClass("Vuejs");
-    }
-
-    if ($(window).scrollTop() >= $skill.offset().top - 600) {
       $(".exItem1").addClass("Ae");
-    }
-    if ($(window).scrollTop() >= $skill.offset().top - 560) {
       $(".exItem2").addClass("Pr");
-    }
-    if ($(window).scrollTop() >= $skill.offset().top - 520) {
       $(".exItem3").addClass("Ps");
-    }
-    if ($(window).scrollTop() >= $skill.offset().top - 480) {
       $(".exItem4").addClass("Ai");
     }
   });
 
   //手機板技能表分頁
-  $btn1.click(function() {
+  $btn1.click(function () {
     $sk2.hide();
     $sk1.show();
     $btn1.addClass("clicked");
     $btn2.removeClass("clicked");
   });
-  $btn2.click(function() {
+  $btn2.click(function () {
     $sk1.hide();
     $sk2.show();
     $btn2.addClass("clicked");
@@ -157,41 +140,41 @@ $(document).ready(function($) {
 
   //作品集上字
   $(".ookami").hover(
-    function() {
+    function () {
       $(this).append(
         $(
           '<a target="_blank" rel="noopener noreferrer" href="https://goo.gl/B33xis">狼少年的獨白</a>'
         )
       );
     },
-    function() {
+    function () {
       $(this)
         .find("a:last")
         .remove();
     }
   );
   $(".drumkit").hover(
-    function() {
+    function () {
       $(this).append(
         $(
           '<a target="_blank" rel="noopener noreferrer" href="../DrumKits/DrumKit.html">網頁簡易鼓組</a>'
         )
       );
     },
-    function() {
+    function () {
       $(this)
         .find("a:last")
         .remove();
     }
   );
   $(".vueCal").hover(
-    function() {
+    function () {
       $(this).append($("<a>Vue計算機</a>"));
     },
-    function() {
+    function () {
       $(this)
         .find("a:last")
         .remove();
     }
   );
-}) ($);
+})($);
