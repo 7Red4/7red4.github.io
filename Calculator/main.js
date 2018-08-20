@@ -67,7 +67,7 @@ var app = new Vue({
           this.currentV = this.savedV * this.currentV
           this.savedV = this.currentV
         }
-      } else if (this.F === '/') {
+      } else if (this.F === '÷') {
         if (this.savedV == false) {
           this.savedV = this.currentV
         } else {
@@ -93,8 +93,8 @@ var app = new Vue({
       } else if (m === '*') {
         this.F = '*'
         this.currentV = 0
-      } else if (m === '/') {
-        this.F = '/'
+      } else if (m === '÷') {
+        this.F = '÷'
         this.currentV = 0
       } else if (m === '=') {
         this.F = 'Ans'

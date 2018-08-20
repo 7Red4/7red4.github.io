@@ -11,15 +11,17 @@
 
 <body>
   <div id="app" class="container">
-    <div v-if="savedV" id="savedV"> {{savedV}} </div>
-    <div id="result"> {{F}} {{ result }} </div>
+    <div id="digitDisplay">
+      <div v-if="savedV" id="savedV"> {{savedV}} </div>
+      <div id="result"> {{F}} {{ result }} </div>
+    </div>
     <div class="btn">
       <button class="AC" @click="reset">AC</button>
       <button class="del" @click="del">Del</button>
       <button @click="num(7)">7</button>
       <button @click="num(8)">8</button>
       <button @click="num(9)">9</button>
-      <button @click="fun('/')">÷</button>
+      <button @click="fun('÷')">÷</button>
       <button @click="num(4)">4</button>
       <button @click="num(5)">5</button>
       <button @click="num(6)">6</button>
