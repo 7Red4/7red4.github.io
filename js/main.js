@@ -169,7 +169,10 @@ $(document).ready(function ($) {
   );
   $(".vueCal").hover(
     function () {
-      $(this).append($("<a>Vue計算機</a>"));
+      $(this).append($(
+        '<a target="_blank" rel="noopener noreferrer" href="../Calculator/index.html">Vue計算機</a>'
+      )
+      );
     },
     function () {
       $(this)
