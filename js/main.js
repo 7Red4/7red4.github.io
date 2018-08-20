@@ -15,7 +15,6 @@ $(document).ready(function ($) {
   var $btn2 = $(".btn2");
   var $phBar = $(".phoneBar");
 
-  alert("This website is only work on chrome!!");
 
   //順暢導向
   $nav.on("click", ".navItem", function (event) {
@@ -143,7 +142,7 @@ $(document).ready(function ($) {
     function () {
       $(this).append(
         $(
-          '<a target="_blank" rel="noopener noreferrer" href="https://goo.gl/B33xis">狼少年的獨白</a>'
+          '<a target="_blank" rel="noopener noreferrer" href="https://vimeo.com/285842951">狼少年的獨白</a>'
         )
       );
     },
