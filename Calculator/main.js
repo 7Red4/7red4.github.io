@@ -2,14 +2,14 @@ var app = new Vue({
   el: '#app',
   data() {
     return {
-      currentV: 0,
+      currentV: '',
       savedV: false,
       F: ''
     }
   },
   methods: {
     reset() {
-      this.currentV = 0
+      this.currentV = ''
       this.savedV = false
       this.F = ''
     },
@@ -18,9 +18,8 @@ var app = new Vue({
         this.F = ''
       }
       let l = this.currentV.toString(10).length - 1
-      let string = this.currentV.toString(10).slice(0, l)
-      this.currentV = Number(string)
-      if (this.currentV == 0) {
+      this.currentV  = this.currentV.toString(10).slice(0, l)
+      if (this.currentV == '') {
         this.F = ''
       }
     },
@@ -28,9 +27,8 @@ var app = new Vue({
       if (this.F === 'Ans') {
         this.reset()
         this.num(val)
-      } else {
-        newVal = this.currentV.toString(10) + val.toString(10)
-        this.currentV = Number(newVal)
+      }else {
+        this.currentV = this.currentV.toString(10) + val.toString(10)
       }
     },
     float() {
@@ -46,6 +44,7 @@ var app = new Vue({
     }
     },
     cal() {
+      this.currentV = Number(this.currentV)
       if (this.F === '+') {
         if (this.savedV == false) {
           this.savedV = this.currentV
@@ -86,16 +85,16 @@ var app = new Vue({
       this.cal()
       if (m === '+') {
         this.F = '+'
-        this.currentV = 0
+        this.currentV = ''
       } else if (m === '-') {
         this.F = '-'
-        this.currentV = 0
+        this.currentV = ''
       } else if (m === '*') {
         this.F = '*'
-        this.currentV = 0
+        this.currentV = ''
       } else if (m === '÷') {
         this.F = '÷'
-        this.currentV = 0
+        this.currentV = ''
       } else if (m === '=') {
         this.F = 'Ans'
         this.currentV = this.savedV
