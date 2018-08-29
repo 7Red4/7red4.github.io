@@ -34,8 +34,13 @@ a {
 }
 
 .headtop {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     background: url("../odaiba.JPG") no-repeat;
     background-attachment: fixed;
     background-position: center center;
@@ -43,8 +48,12 @@ a {
     width:100%;
     height:100vh;
     overflow: hidden;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .headtop>h3 {
@@ -69,7 +78,11 @@ a {
 }
 
 .headtop>a:hover{
-    transform: scale(1.2) rotate(360deg);
+    -webkit-transform: scale(1.2) rotate(360deg);
+        -ms-transform: scale(1.2) rotate(360deg);
+            transform: scale(1.2) rotate(360deg);
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
     transition: 0.7s;
 }
 
@@ -80,15 +93,29 @@ i {
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
-    animation: arrow 1.5s infinite;
+    -webkit-animation: arrow 1.5s infinite;
+            animation: arrow 1.5s infinite;
   }
+
+@-webkit-keyframes arrow {
+    0%, 100%{
+        -webkit-transform: translate(0, 0) rotate(45deg);
+                transform: translate(0, 0) rotate(45deg);
+    }
+    50%{
+        -webkit-transform: translate(0, 10px) rotate(45deg);
+                transform: translate(0, 10px) rotate(45deg);
+    }
+}
 
 @keyframes arrow {
     0%, 100%{
-        transform: translate(0, 0) rotate(45deg);
+        -webkit-transform: translate(0, 0) rotate(45deg);
+                transform: translate(0, 0) rotate(45deg);
     }
     50%{
-        transform: translate(0, 10px) rotate(45deg);
+        -webkit-transform: translate(0, 10px) rotate(45deg);
+                transform: translate(0, 10px) rotate(45deg);
     }
 }
 
@@ -111,15 +138,27 @@ i {
 
 .nav {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     font-family: 'Roboto', sans-serif;    
+    background:-webkit-gradient(linear,left top, right bottom,from(rgb(255, 255, 255)), to(rgb(196, 196, 196)));    
+    background:-webkit-linear-gradient(top left,rgb(255, 255, 255), rgb(196, 196, 196));    
+    background:-o-linear-gradient(top left,rgb(255, 255, 255), rgb(196, 196, 196));    
     background:linear-gradient(to bottom right,rgb(255, 255, 255), rgb(196, 196, 196));
 }
         
 .navItem {
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     font-size: 24px;
     min-width: 150px;
@@ -129,6 +168,8 @@ i {
     text-transform: uppercase;
     background-color: #000;
     color: #fff;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
     cursor: pointer;
 }
@@ -140,19 +181,34 @@ i {
 #profile{
     background-color: azure;
     opacity: 0;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
 }
 
 .profile {
     position: relative;
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     overflow: hidden;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     font-family: 'Noto Sans TC', sans-serif;
+    -webkit-transition: 2s;
+    -o-transition: 2s;
     transition: 2s;
 }
 
@@ -166,18 +222,27 @@ i {
     background-image: url(../img/profile2.jpg);
     opacity: 0;
     margin-left: -600px;
+    -webkit-transition:1s;
+    -o-transition:1s;
     transition:1s;
 }
 
 #paragraph {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 79%;
     margin-left: 20px;
     padding-left: 600px;
     opacity: 0;
     line-height: 1.5;
     font-size: 18px;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
 }
 
@@ -192,8 +257,12 @@ i {
     background-color: rgb(255, 252, 221);
     padding-bottom: 7%;
     position: relative;
-    transform: translate(0, -100px);
+    -webkit-transform: translate(0, -100px);
+        -ms-transform: translate(0, -100px);
+            transform: translate(0, -100px);
     opacity: 0;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
 }
 
@@ -201,8 +270,12 @@ i {
     position: relative;
     width: 100%;
     opacity: 0;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
-    transform: translate(0, -100px);
+    -webkit-transform: translate(0, -100px);
+        -ms-transform: translate(0, -100px);
+            transform: translate(0, -100px);
     text-align: center;
     font-size: 2em;
     background-color: rgb(252, 248, 204);
@@ -223,9 +296,16 @@ i {
 }
 
 .ability {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
 }
 
 .mAbility {
@@ -233,36 +313,63 @@ i {
 }
 
 .iSkill {
-    flex-grow: 2;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
     height: 20vh;
 }
 
 .skillItem{
     max-width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    flex-grow: 5;
-    justify-content: flex-start; 
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 5;
+        -ms-flex-positive: 5;
+            flex-grow: 5;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; 
     height: 85vh;
 }
 
 #coding>div  {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     padding-left: 130px;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     margin: 0 3%; 
     font-family: 'Roboto', sans-serif;
     text-align: left;
 }
 
 #extra>div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     padding-left: 130px;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     margin: 0 3%; 
     font-family: 'Roboto', sans-serif;
     text-align: left;
@@ -299,7 +406,8 @@ i {
     background-repeat: no-repeat;
     background-size: 120px;  
     background-position-y:center;
-    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
 }
 
 .HTML:before {
@@ -312,8 +420,19 @@ i {
     width: 75%;
     background-color: #f77;
     color:  rgb(216, 216, 216);
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
-    animation: HTMLprogress 2s ease-out;
+    -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
+    -webkit-animation: HTMLprogress 2s ease-out;
+            animation: HTMLprogress 2s ease-out;
+}
+
+@-webkit-keyframes HTMLprogress {
+    0%{
+        width: 0%;
+    }
+    100% {
+        width: 75%;
+    }
 }
 
 @keyframes HTMLprogress {
@@ -331,7 +450,8 @@ i {
     background-repeat: no-repeat;
     background-size: 120px;  
     background-position-y:center; 
-    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s; 
+            animation: fadeIn 1s;
 }
 
 .CSS:before {
@@ -344,8 +464,19 @@ i {
     width: 90%;
     background-color: #f77;
     color:  rgb(216, 216, 216);
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
-    animation: CSSprogress 2s ease-out;
+    -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
+    -webkit-animation: CSSprogress 2s ease-out;
+            animation: CSSprogress 2s ease-out;
+}
+
+@-webkit-keyframes CSSprogress {
+    0%{
+        width: 0%;
+    }
+    100% {
+        width: 90%;
+    }
 }
 
 @keyframes CSSprogress {
@@ -362,7 +493,8 @@ i {
     background-repeat: no-repeat;
     background-size: 110px;
     background-position-y:center; 
-    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s; 
+            animation: fadeIn 1s;
 }
 
 .JavaScript:before {
@@ -375,8 +507,19 @@ i {
     width: 80%;
     background-color: #f77;
     color:  rgb(216, 216, 216);
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
-    animation: JavaScriptprogress 2s ease-out;
+    -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
+    -webkit-animation: JavaScriptprogress 2s ease-out;
+            animation: JavaScriptprogress 2s ease-out;
+}
+
+@-webkit-keyframes JavaScriptprogress {
+    0%{
+        width: 0%;
+    }
+    100% {
+        width: 80%;
+    }
 }
 
 @keyframes JavaScriptprogress {
@@ -393,7 +536,8 @@ i {
     background-repeat: no-repeat;
     background-size: 110px;
     background-position-y:center; 
-    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s; 
+            animation: fadeIn 1s;
 }
 
 .jQuery:before {
@@ -406,8 +550,19 @@ i {
     width: 70%;
     background-color: #f77;
     color:  rgb(216, 216, 216);
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
-    animation: jQueryprogress 2s ease-out;
+    -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
+    -webkit-animation: jQueryprogress 2s ease-out;
+            animation: jQueryprogress 2s ease-out;
+}
+
+@-webkit-keyframes jQueryprogress {
+    0%{
+        width: 0%;
+    }
+    100% {
+        width: 70%;
+    }
 }
 
 @keyframes jQueryprogress {
@@ -424,7 +579,8 @@ i {
     background-repeat: no-repeat;
     background-size: 110px;
     background-position-y:center; 
-    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s; 
+            animation: fadeIn 1s;
 }
 
 
@@ -438,8 +594,19 @@ i {
     width: 30%;
     background-color: #f77;
     color:  rgb(216, 216, 216);
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
-    animation: Vuejsprogress 2s ease-out;
+    -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
+    -webkit-animation: Vuejsprogress 2s ease-out;
+            animation: Vuejsprogress 2s ease-out;
+}
+
+@-webkit-keyframes Vuejsprogress {
+    0%{
+        width: 0%;
+    }
+    100% {
+        width: 30%;
+    }
 }
 
 @keyframes Vuejsprogress {
@@ -448,6 +615,16 @@ i {
     }
     100% {
         width: 30%;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0%{
+        color: transparent;
+    }
+    100% {
+        color: #000;
+
     }
 }
 
@@ -469,7 +646,8 @@ i {
     background-repeat: no-repeat;
     background-size: 110px;
     background-position-y:center; 
-    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s; 
+            animation: fadeIn 1s;
 }
 
 .Ae:before {
@@ -482,8 +660,19 @@ i {
     width: 80%;
     background-color: rgba(139, 98, 194, 0.712);
     color:  rgb(216, 216, 216);
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
-    animation: AeBar 2s ease-out;
+    -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
+    -webkit-animation: AeBar 2s ease-out;
+            animation: AeBar 2s ease-out;
+}
+
+@-webkit-keyframes AeBar {
+    0%{
+        width: 0%;
+    }
+    100% {
+        width: 80%;
+    }
 }
 
 @keyframes AeBar {
@@ -500,7 +689,8 @@ i {
     background-repeat: no-repeat;
     background-size: 110px;
     background-position-y:center; 
-    animation: fadeIn 0.5s;
+    -webkit-animation: fadeIn 0.5s; 
+            animation: fadeIn 0.5s;
 }
 
 .Pr:before {
@@ -513,8 +703,19 @@ i {
     width: 70%;
     background-color: #660077;
     color:  rgb(216, 216, 216);
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
-    animation: PrBar 2s ease-out;
+    -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
+    -webkit-animation: PrBar 2s ease-out;
+            animation: PrBar 2s ease-out;
+}
+
+@-webkit-keyframes PrBar {
+    0%{
+        width: 0%;
+    }
+    100% {
+        width: 70%;
+    }
 }
 
 @keyframes PrBar {
@@ -531,7 +732,8 @@ i {
     background-repeat: no-repeat;
     background-size: 110px;
     background-position-y:center; 
-    animation: fadeIn 0.5s;
+    -webkit-animation: fadeIn 0.5s; 
+            animation: fadeIn 0.5s;
 }
 
 .Ps:before {
@@ -544,8 +746,19 @@ i {
     width: 50%;
     background-color: #33CCFF;
     color:  rgb(216, 216, 216);
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
-    animation: PsBar 2s ease-out;
+    -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
+    -webkit-animation: PsBar 2s ease-out;
+            animation: PsBar 2s ease-out;
+}
+
+@-webkit-keyframes PsBar {
+    0%{
+        width: 0%;
+    }
+    100% {
+        width: 50%;
+    }
 }
 
 @keyframes PsBar {
@@ -562,7 +775,8 @@ i {
     background-repeat: no-repeat;
     background-size: 110px;
     background-position-y:center; 
-    animation: fadeIn 0.5s;
+    -webkit-animation: fadeIn 0.5s; 
+            animation: fadeIn 0.5s;
 }
 
 .Ai:before {
@@ -575,8 +789,19 @@ i {
     width: 50%;
     background-color: #FFAA33;
     color: rgb(216, 216, 216);
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
-    animation: AiBar 2s ease-out;
+    -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.63);
+    -webkit-animation: AiBar 2s ease-out;
+            animation: AiBar 2s ease-out;
+}
+
+@-webkit-keyframes AiBar {
+    0%{
+        width: 0%;
+    }
+    100% {
+        width: 50%;
+    }
 }
 
 @keyframes AiBar {
@@ -590,8 +815,11 @@ i {
 /*extra*/
 
 #knowledge{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 }
 
 #knowledge>div>h2{
@@ -613,11 +841,20 @@ i {
 }
 
 .protfolio {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    flex: 1;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     overflow: hidden;
     background-color: rgb(136, 136, 136);
     padding-top: 3%;
@@ -631,14 +868,20 @@ i {
     margin: 3% 1%;
     width: 320px;
     height: 144px;
-    filter: blur(0px);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
 } 
 
 .protfolio>div:hover > img {
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
     cursor: pointer;
-    filter: blur(4px);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
 }
 
 .protfolio>div>a {
@@ -647,8 +890,11 @@ i {
     color: #fff;
     top: -193px;
     right: -5px;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
-    animation: fadeInW 1s;
+    -webkit-animation: fadeInW 1s;
+            animation: fadeInW 1s;
     overflow: hidden;
 }
 
@@ -657,8 +903,13 @@ i {
 }
 
 .contact{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     background-color: rgb(34, 33, 33);
     width: 100%;
     height: 200px;
@@ -667,6 +918,8 @@ i {
 }
 
 .contact>div{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-left: 10px;
     padding-top: 20px;
@@ -675,6 +928,15 @@ i {
 .contact>div>img{
     width: 25px;
     height: 25px;
+}
+
+@-webkit-keyframes fadeInW {
+    0%{
+        color: transparent;
+    }
+    100% {
+        color: #fff;
+    }
 }
 
 @keyframes fadeInW {
@@ -686,12 +948,25 @@ i {
     }
 }
 
-@keyframes rotate {
+@-webkit-keyframes rotate {
     0%{
-        transform: rotateZ(0deg)
+        -webkit-transform: rotateZ(0deg);
+                transform: rotateZ(0deg)
     }
     100%{
-        transform: rotateZ(360deg)
+        -webkit-transform: rotateZ(360deg);
+                transform: rotateZ(360deg)
+    }
+}
+
+@keyframes rotate {
+    0%{
+        -webkit-transform: rotateZ(0deg);
+                transform: rotateZ(0deg)
+    }
+    100%{
+        -webkit-transform: rotateZ(360deg);
+                transform: rotateZ(360deg)
     }
 }
 
@@ -701,8 +976,13 @@ i {
     }
 
     .mNav {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         margin-left: 0;
         width: 0;
         height: 100vh;
@@ -713,6 +993,8 @@ i {
         font-family: 'Roboto', sans-serif;    
         line-height: 1.5em;
         background-color:rgba(196, 196, 196, 0.89);
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
         transition: 0.3s;
     }
 
@@ -736,7 +1018,10 @@ i {
         background-image: url(../img/icon.png);
         background-size: cover;
         background-color: rgb(170, 170, 170);
-        animation: rotate 0.5s;
+        -webkit-animation: rotate 0.5s;
+                animation: rotate 0.5s;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
         transition: 0.5s;
     }
 
@@ -749,23 +1034,33 @@ i {
         background-image: url(../img/cross.png);
         background-size: cover;
         background-color: rgb(170, 170, 170);
-        animation: rotate 0.5s;
+        -webkit-animation: rotate 0.5s;
+                animation: rotate 0.5s;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
         transition: 0.5s;
     }
 
     #photo {
-        align-self: center;
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
         width: 300px;
         height: 300px;
     }
 
     .profile {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
     #paragraph {
         font-size: 12px;
-        align-self: center;
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
     }
 
     .resume{
@@ -790,8 +1085,13 @@ i {
     }
 
     .mAbility {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         height: 85vh;
         margin: 3% 10% 0 10%;
     }
@@ -809,10 +1109,18 @@ i {
     }
     
     .skillItem1 {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        flex-grow: 1;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
         margin: 0;
         padding: 0; 
         font-family: 'Roboto', sans-serif;
@@ -822,10 +1130,18 @@ i {
     }
 
     .skillItem2 {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        flex-grow: 1;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
         margin: 0 ; 
         font-family: 'Roboto', sans-serif;
         text-align: left;
@@ -846,7 +1162,10 @@ i {
     }
     
     #knowledge{
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         padding-left: 20px;
         font-size: 16px;
     }
