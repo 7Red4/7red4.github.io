@@ -85,7 +85,7 @@
 <audio id='z'>
   <source src="./audio/Open Hat_4.mp3" type="audio/mp3">
 </audio>
-
+<div class="loading"></div>
 <body id="whichkey">
   <div class="mobile">
     請使用電腦與鍵盤
@@ -94,6 +94,9 @@
   <div id="erro">Invaild Key</div>
 
   <script>
+    $(window).on('load',function(){
+      $('.loading').remove();
+    });
     let key = '';
     let SKey = 0;
     let alpha = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
@@ -153,6 +156,14 @@
 
   </script>
   <style>
+    .loading{
+      height: 100vh;
+      width: 100vw;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url(./loading.gif)
+    }
+
     #whichkey {
       background-color: lightgray;
     }
