@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="76.635" height="70.882" viewBox="0 0 76.635 70.882">
+  <g id="Group_1" data-name="Group 1" transform="translate(-407.068 -427.059)">
+    <line id="Line_1" data-name="Line 1" y2="20" transform="translate(414.5 461.5)" fill="none" stroke="#989898" stroke-width="1"/>
+    <line id="Line_2" data-name="Line 2" y2="36" transform="translate(444.5 461.5)" fill="none" stroke="#989898" stroke-width="1"/>
+    <line id="Line_3" data-name="Line 3" y2="33" transform="translate(446.5 427.5)" fill="none" stroke="#989898" stroke-width="1"/>
+    <line id="Line_4" data-name="Line 4" y2="21" transform="translate(476.5 458.5)" fill="none" stroke="#989898" stroke-width="1"/>
+    <line id="Line_5" data-name="Line 5" x2="30" y2="16" transform="translate(414.5 445.5)" fill="none" stroke="#989898" stroke-width="1"/>
+    <line id="Line_6" data-name="Line 6" x1="32" y2="18" transform="translate(444.5 443.5)" fill="none" stroke="#989898" stroke-width="1"/>
+    <line id="Line_7" data-name="Line 7" x2="30" y2="16" transform="translate(446.5 427.5)" fill="none" stroke="#989898" stroke-width="1"/>
+    <line id="Line_8" data-name="Line 8" y1="18" x2="32" transform="translate(414.5 427.5)" fill="none" stroke="#989898" stroke-width="1"/>
+    <line id="Line_9" data-name="Line 9" x2="30" y2="16" transform="translate(414.5 481.5)" fill="none" stroke="#989898" stroke-width="1"/>
+    <line id="Line_10" data-name="Line 10" x1="32" y2="18" transform="translate(444.5 479.5)" fill="none" stroke="#989898" stroke-width="1"/>
+    <line id="Line_11" data-name="Line 11" x1="7" y2="12" transform="translate(407.5 445.5)" fill="none" stroke="#989898" stroke-width="1"/>
+    <line id="Line_12" data-name="Line 12" x1="7" y2="12" transform="translate(437.5 461.5)" fill="none" stroke="#989898" stroke-width="1"/>
+    <line id="Line_13" data-name="Line 13" x2="30" y2="16" transform="translate(407.5 457.5)" fill="none" stroke="#989898" stroke-width="1"/>
+    <line id="Line_14" data-name="Line 14" x2="5" y2="12" transform="translate(444.5 461.5)" fill="none" stroke="#989898" stroke-width="1"/>
+    <line id="Line_15" data-name="Line 15" x2="5" y2="12" transform="translate(476.5 443.5)" fill="none" stroke="#989898" stroke-width="1"/>
+    <line id="Line_16" data-name="Line 16" y1="18" x2="32" transform="translate(449.5 455.5)" fill="none" stroke="#989898" stroke-width="1"/>
+    <g id="Rectangle_1" data-name="Rectangle 1" transform="translate(453 480)" fill="#fff" stroke="#a7a7a7" stroke-width="1">
+      <rect width="30.703" height="14.788" stroke="none"/>
+      <rect x="0.5" y="0.5" width="29.703" height="13.788" fill="none"/>
+    </g>
+    <text id="tools_knowledge" data-name="tools &amp;
+knowledge" transform="translate(459 486)" fill="#707070" font-size="4" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">tools &amp;</tspan><tspan x="0" y="5">knowledge</tspan></text>
+  </g>
+</svg>
