@@ -98,7 +98,7 @@
 }
 
 .v-progress-circular .v-progress-circular__underlay {
-  stroke: transparent;
+  stroke: #ffedf7;
 }
 
 .v-progress-circular__info {
