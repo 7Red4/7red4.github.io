@@ -8,18 +8,108 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/vuetify/1.5.16/vuetify.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./main.css" />
     <title>F2E 精神時光屋 第一週 ｜ 蕃茄鐘</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/1.5.16/vuetify.min.js"></script>
   </head>
   <body>
     <div id="app">
       <v-app>
-        <v-card>
-          <h1>dassa</h1>
-        </v-card>
+        <v-layout class="pa-5" row wrap fill-height>
+          <v-flex xs12 md5>
+            <v-layout
+              class="mission_controll pr-2"
+              column
+              justify-space-between
+              fill-height
+            >
+              <v-flex>
+                <v-text-field
+                  solo
+                  color="#ff4384"
+                  class="new_mission elevation-0"
+                  label="ADD A NEW MISSION"
+                  v-model="newMission"
+                >
+                </v-text-field>
+              </v-flex>
+              <v-flex>
+                <div class="mission_title_block">
+                  <div class="circle mr-2"></div>
+                  <div class="mission_title_text">
+                    <h3>THE FIRST THING TO DO TODAY</h3>
+                    <div class="circle small peach"></div>
+                  </div>
+                </div>
+                <div class="timmer">
+                  <h1 class="timmer_text">
+                    25 : 00
+                  </h1>
+                </div>
+              </v-flex>
+              <v-flex>
+                <div class="missions_list">
+                  <div
+                    v-for="(list, idx) in missionlists"
+                    class="missions_list_container"
+                  >
+                    <div class="missions_list_tile">
+                      <div class="missions_list_item">
+                        <div class="circle small mr-2"></div>
+                        <h3>THE {{ list }} THING TO DO TODAY</h3>
+                      </div>
+                      <div class="missions_list_play">
+                        <v-icon color="#003164">play_circle_outline</v-icon>
+                      </div>
+                    </div>
+                    <v-divider color="rgba(0, 49, 100, 0.2)"></v-divider>
+                  </div>
+                  <div class="missions_list_more font-weight-bold">MORE</div>
+                </div>
+              </v-flex>
+            </v-layout>
+          </v-flex>
+          <v-flex xs12 md6>
+            <v-layout row wrap fill-height align-center justify-center>
+              <v-progress-circular
+                :value="20"
+                :rotate="-90"
+                color="#ff4384"
+                :width="20"
+                :size="520"
+                button
+              >
+                <div class="circular_content">
+                  <v-icon color="#ffffff">play_circle_filled</v-icon>
+                </div>
+              </v-progress-circular>
+            </v-layout>
+          </v-flex>
+          <v-flex xs12 md1>
+            <v-layout class="function_menu" column align-center fill-height>
+              <div class="menu_icon mb-5">
+                <v-icon color="#fff">list</v-icon>
+              </div>
+              <div class="menu_icon mb-5">
+                <v-icon color="#fff">insert_chart</v-icon>
+              </div>
+              <div class="menu_icon mb-5">
+                <v-icon color="#fff">library_music</v-icon>
+              </div>
+              <v-spacer></v-spacer>
+              <div class="pomodoro font-weight-bold">POMODORO</div>
+            </v-layout>
+          </v-flex>
+        </v-layout>
       </v-app>
     </div>
+
+    <script src="./main.js"></script>
   </body>
 </html>
