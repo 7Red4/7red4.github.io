@@ -1,11 +1,17 @@
 #app {
-  background-image: linear-gradient(
-    to right,
-    #ffedf7,
-    #ffedf7 65.4%,
-    #003164 65.4%,
-    #003164 100%
-  );
+  transition: 0.3s;
+  &.gradient {
+    background-image: linear-gradient(
+      to right,
+      #ffedf7,
+      #ffedf7 65.4%,
+      #003164 65.4%,
+      #003164 100%
+    );
+  }
+  &.menu {
+    background-image: linear-gradient(to right, #003164, #003164 100%);
+  }
 }
 
 .mission_controll {

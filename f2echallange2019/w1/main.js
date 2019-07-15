@@ -1,6 +1,6 @@
 $(() => {
   const app = new Vue({
-    el: "#app",
+    el: "#vueWrapper",
     data() {
       return {
         newMission: "",
