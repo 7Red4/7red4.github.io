@@ -92,6 +92,11 @@
       align-self: flex-end;
 }
 
+.v-progress-circular {
+  border-radius: 100%;
+  border: 4px solid #ff4384;
+}
+
 .v-progress-circular .v-progress-circular__underlay {
   stroke: #ffedf7;
 }
@@ -119,32 +124,8 @@
           justify-content: center;
 }
 
-.v-progress-circular__info .circular_content::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  border-radius: 100%;
-  border: 4px solid #ff4384;
-}
-
 .v-progress-circular__info .circular_content i {
-  position: relative;
   font-size: 96px;
-}
-
-.v-progress-circular__info .circular_content i::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  bottom: 0;
-  left: 100%;
-  background-color: #fff;
 }
 
 .function_menu .menu_icon i {
