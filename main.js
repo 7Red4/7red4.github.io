@@ -189,7 +189,7 @@ window.onload = () => {
           },
           {
             img: "./chat-it-up.jpg",
-            href: "https://red4.herokuapp.com/chat/",
+            href: "https://red4-l.appspot.com/chat/",
             name: "NUXT + socket 線上聊天室"
           },
           {

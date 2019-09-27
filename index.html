@@ -101,10 +101,8 @@
 
         <v-container grid-list-xs pa-0>
           <v-layout row wrap align-center justify-center>
-            <transition>
               <v-img
-                v-show="!isDark"
-                src="./lightSunset.JPG"
+                :src="isDark ? './darkSunset.JPG' : './lightSunset.JPG'"
                 width="100vw"
                 height="100vh"
               >
@@ -116,41 +114,16 @@
                   <v-btn
                     href="https://github.com/7Red4/aboutMe/blob/master/README.md"
                     target="_blank"
-                    icon
+                    flat
+                    color="white"
                   >
-                    <v-icon>fab fa-github</v-icon>
+                    <v-icon class="mr-3">fab fa-github</v-icon> github
                   </v-btn>
-                  <v-icon @click="scrollDown" x-large class="scrollDown"
+                  <v-icon @click="scrollDown" x-large color="white" class="scrollDown"
                     >expand_more</v-icon
                   >
                 </v-layout>
               </v-img>
-            </transition>
-            <transition fade-transition>
-              <v-img
-                v-show="isDark"
-                src="./darkSunset.JPG"
-                width="100vw"
-                height="100vh"
-              >
-                <v-layout column align-center justify-center fill-height>
-                  <h1 class="display-4">7 Red4</h1>
-                  <h2>人生的道路就是不斷</h2>
-                  <h2>跌倒、碰壁、失敗</h2>
-                  <h2>而成就了未來</h2>
-                  <v-btn
-                    href="https://github.com/7Red4/aboutMe/blob/master/README.md"
-                    target="_blank"
-                    icon
-                  >
-                    <v-icon>fab fa-github</v-icon>
-                  </v-btn>
-                  <v-icon @click="scrollDown" x-large class="scrollDown"
-                    >expand_more</v-icon
-                  >
-                </v-layout>
-              </v-img>
-            </transition>
           </v-layout>
 
           <v-layout id="Profile" row wrap>
@@ -217,8 +190,8 @@
                       到後端，甚至是一些的環境，能學的都學
                       能吸收的都吸收。看了一些設計規範以及 UI / UX 觀念、一些
                       webpack 相關 知識、SSR 以及 prerender
-                      、Node.js(express)、PHP + apache2 等等...
-                      不敢說精但希望至少在遇到其他相關領域上不要是一知半解，甚至可以完全了解。
+                      、Node.js(express)、PHP + apache2、NGINX、socket.js 等等...
+                      不敢說是精通但希望至少在遇到其他相關領域上不要是一知半解，甚至可以完全了解。
                     </p>
                   </v-card-text>
                 </v-card>
@@ -302,7 +275,7 @@
                           </p>
                           <p class="subheading mt-1">
                             除此之外也嘗試了各式新穎的技術，像是 PWA 或是 Vuetify 等，扣除掉資料庫的部分，網頁上大部分的狀況幾乎都可以應付或是找到答案來解決。
-                            閒暇之餘，也會嘗試研究額外的技術，像是 socket, Flutter 等等。
+                            閒暇之餘，也會嘗試研究額外的技術，像是 socket( <a href="https://red4-l.appspot.com/chat" target="_blank">Nuxt + socket 聊天室</a> ), Flutter 等等。
                           </p>
                         </div>
                       </v-flex>
@@ -451,7 +424,7 @@
             <v-flex class="protfolio_block px-3 mt-3" xs12 sm6 md4 v-for="(item, key) in protfolios" :key="key">
               <v-card class="text-xs-center">
                 <div class="mask"></div>
-                <v-img :src="item.img"></v-img>
+                <v-img :aspect-ratio="16/9" :src="item.img"></v-img>
                 <v-card-title class="protfolio_name justify-center display-1">
                   <v-btn class="protfolio_link" :href="item.href" target="_blank"
                     large depressed color="primary">
