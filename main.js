@@ -193,9 +193,9 @@ window.onload = () => {
             name: "NUXT + socket 線上聊天室"
           },
           {
-            img: "./7red4_2019.jpg",
-            href: "https://7red4.github.io/",
-            name: "Vue + Vuetify 作品集網站"
+            img: "./shenlearnAppstore.png",
+            href: "https://apps.apple.com/tw/app/%E8%8E%98%E8%8E%98%E6%95%99%E8%82%B2/id1485196739/",
+            name: "Flutter 開發雙平台 app"
           }
         ],
         formScheamas: [
