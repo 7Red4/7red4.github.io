@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="72" height="60.854" viewBox="0 0 72 60.854">
-  <g id="Group_12" data-name="Group 12" transform="translate(-455 -465)">
-    <text id="HTML" transform="translate(455 489)" fill="#b1790a" font-size="22" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">HTML</tspan></text>
-    <line id="Line_21" data-name="Line 21" x1="13" y2="14" transform="translate(511.5 469.5)" fill="none" stroke="#b1790a" stroke-width="1"/>
-    <line id="Line_22" data-name="Line 22" x1="34" y2="34" transform="translate(470.5 491.5)" fill="none" stroke="#b1790a" stroke-width="1"/>
-    <text id="CSS" transform="translate(493 519)" fill="#b1790a" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">CSS</tspan></text>
-  </g>
-</svg>
